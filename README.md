@@ -1,2 +1,3 @@
-# Adrii's codes
+# info
+
 just doing for timepass
