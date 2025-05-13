@@ -13,35 +13,35 @@ body {
 #cake {
   display: block;
   position: relative;
-  margin: -10em auto 0 auto;
+  margin: 48em auto 0 auto;
+  transform: scale(5); /* make it 1.5x bigger */
+}
+
 }
  
+
+}
+
+#button
 .beautiful-button {
+  
   position: relative;
+  top: 50px; /* Adjust the value as needed */
   display: inline-block;
   background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
- /* Gradient background */
   color: white;
- /* White text color */
   font-family: "Segoe UI", sans-serif;
- /* Stylish and legible font */
   font-weight: bold;
   font-size: 18px;
- /* Large font size */
   border: none;
- /* No border */
   border-radius: 30px;
- /* Rounded corners */
   padding: 14px 28px;
- /* Large padding */
   cursor: pointer;
- /* Cursor on hover */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
- /* Subtle shadow */
-  animation: button-shimmer 2s infinite;
   transition: all 0.3s ease-in-out;
- /* Smooth transition */
+  margin-top: 50px; /* Add this line */
 }
+
 
 /* Hover animation */
 .beautiful-button:hover {
@@ -89,26 +89,25 @@ body {
 */
 
 .velas {
-  background: #ffffff;
+  background: #847d7d;
   border-radius: 10px;
   position: absolute;
-  top: 228px;
-  left: 50%;
-  margin-left: -2.4px;
-  margin-top: -8.33333333px;
+  top: 1700px; /* Increase this value to move the candle down */
+  left: 80%; /* Centers the candle horizontally */
+  margin-left: -2.4px; /* Fine-tune horizontal alignment */
   width: 5px;
   height: 35px;
-  transform: translateY(-300px);
+  transform: translateY(-100px) scale(5);  
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
 }
-.velas:after,
+
 .velas:before {
   background: rgba(255, 0, 0, 0.4);
   content: "";
   position: absolute;
   width: 100%;
-  height: 2.22222222px;
+  height: 10px;
 }
 .velas:after {
   top: 25%;
@@ -130,6 +129,7 @@ body {
   margin-left: -2.6px;
   width: 6.66666667px;
   height: 18px;
+  transform: scale(-3);
 }
 .fuego:nth-child(1) {
   animation: fuego 2s 6.5s infinite;
@@ -154,36 +154,41 @@ body {
   0%, 100% {
     background: rgba(254, 248, 97, 0.5);
     box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1.8);
   }
   50% {
     background: rgba(255, 50, 0, 0.1);
-    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
-    transform: translateY(-20px) scale(0);
+    box-shadow: 0 0 40px 40px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(2.5);
   }
 }
 
 @keyframes in {
   to {
-    transform: translateY(0);
+    transform: translateY(0)scale(5);
   }
 }
 
 .text {
-  color: #8b6a60;
+  color: #52352c;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
-  font-style:italic;
-  text-align: center;
-  h1 {
-    font-size: 1.4em;
-  }
-}  .text {
-    display: flex;
-    flex-direction: column; /* Makes sure the text stacks vertically */
-    justify-content: flex-start;
-padding-top: 100px; /* adjust as needed */
-  align-items: center; /* Centers the text horizontally */
-    height: 100vh; /* Takes the full height of the viewport */
-    text-align: center; /* Ensures the text is centered inside each element */
+  font-style: italic;
+
+  /* ðŸ‘‡ Remove flex if you want manual control */
+  margin-top: -1000px;
+  padding-left: 500px;  /* ðŸ‘ˆ adjust this */
+  padding-right: -1000px;  /* ðŸ‘‰ and this */
+  text-align: center;     /* or center/right, your vibe */
+
+  /* no height or flex needed if ur placing it manually */
 }
+
+.text h1 {
+  font-size: 10em; /* ðŸ“¢ Bigger title */
+}
+
+.text p {
+  font-size: 7em; /* ðŸ§  Bigger paragraph */
+}
+
